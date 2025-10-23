@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <%- include ('../partials/nav.ejs') %>
+</head>
+
+<body>
+    <h1>This is a list of all your dogs!</h1>
+    <ul>
+        <% allDogs.forEach((dog)=> { %>
+            <li>
+                <a href = '/dogs/<%= dog._id%>'><%= dog.name %></a>
+            </li>
+            <% }) %>
+           
+    </ul>
+
+</body>
+
+</html>

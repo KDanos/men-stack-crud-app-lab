@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a dog</title>
+    <%- include ('../partials/nav.ejs') %>
+</head>
+
+<body>
+    <h1>This is where you will add new dogs!</h1>
+    <form action="/dogs" , method="POST">
+        <div>
+            <br>
+            <label for='breed'>Breed:
+                <input type='text' , name='breed' , id='breed' , required />
+            </label>
+        </div>
+
+        <div>
+            <br>
+            <label for='name'>Name:
+                <input type='text' , name='name' , id='name' , required />
+            </label>
+        </div>
+
+        <div>
+            <br>
+            <label for='age'>Age:
+                <input type='text' , name='age' , id='age' , , pattern="\d*" , required />
+            </label>
+        </div>
+
+        <div>
+            <br>
+            <label for='color'>Color:
+                <input type='text' , name='color' , id='color' />
+            </label>
+        </div>
+
+        <div>
+            <br>
+            <label for='size'>Size:
+                <select name='size' , id='size'>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </label>
+        </div>
+
+        <br> <button type="submit">Let's add your dog!</button>
+
+    </form>
+</body>
+
+</html>
