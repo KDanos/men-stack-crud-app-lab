@@ -13,6 +13,7 @@ const app = express();
 //Middleware
 app.use(morgan('dev'));
 app.use(express.urlencoded())
+app.use(express.static('public'));
 
 
 //Routes
@@ -62,4 +63,4 @@ const connectionKD = async () => {
 
 connectionKD();
 console.log('This is just a random message to test asynchronous behaviour')
-app.listen(3000, () => { console.log('I am listening') })
+app.listen(3500, () => { console.log('I am listening') })
