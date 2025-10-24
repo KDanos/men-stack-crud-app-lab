@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= myDog.name%></title>
+    <title>
+        <%= myDog.name%>
+    </title>
     <%- include ('../partials/nav.ejs') %>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
-<body>
-        <h1><%= myDog.name%></h1>
-        <h2>Breed: <%= myDog.breed%></h2>
-        <h2>Color: <%= myDog.color%></h2>
-        <h2>Age: <%= myDog.age%></h2>
-        <h2>Size: <%= myDog.size%></h2>
 
+<body>
+    <h1>
+        <%= myDog.name%>
+    </h1>
+    <h2>Breed: <%= myDog.breed%>
+    </h2>
+    <h2>Color: <%= myDog.color%>
+    </h2>
+    <h2>Age: <%= myDog.age%>
+    </h2>
+    <h2>Size: <%= myDog.size%>
+    </h2>
+    <form action="/dogs/<%= myDog._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%=myDog.name %></button>
+    </form>
+    <a href="/dogs/<%= myDog._id %>/edit">Edit <%= myDog.name %> </a>
 </body>
+
 </html>
